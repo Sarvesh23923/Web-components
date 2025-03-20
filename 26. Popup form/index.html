@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="content-container">
+            <h1>Welcome to the <span>Spider Society 🕷️🕸️</span></h1>
+            <p>
+                You've just stepped into a world where agility, intellect, and heroism define us. Whether you’re
+                swinging between skyscrapers or strategizing in the shadows, the Spider Society is your home—a place
+                where extraordinary individuals unite to protect the multiverse.
+            </p>
+            <button class="signup-btn open">Sign Up</button>
+        </div>
+    </header>
+
+    <section class="modal-container">
+        <section class="modal">
+            <button class="close-btn"><img src="close.svg" alt=""></button>
+            <div class="modal-content">
+                <h1>Sign Up</h1>
+                <form class="modal-form">
+                    <div>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Enter Name" class="form-input">
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Enter Email" class="form-input">
+                    </div>
+                    <div>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter Password" class="form-input">
+                    </div>
+                    <div>
+                        <label for="confirm">Confirm Password</label>
+                        <input type="password" id="confirm" placeholder="Re-enter password" class="form-input">
+                    </div>
+                    <input type="submit" value="Submit" class="submit-btn">
+                </form>
+            </div>
+        </section>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

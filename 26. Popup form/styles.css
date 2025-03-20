@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --modal-duration: 1s;
+    --primary-color: #de0606;
+    --secondary-color: #007fd7;
+}
+
+body{
+    font-family: sans-serif;
+    transition: all 0.5s ease;
+}
+
+header{
+    background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5)),url(bg.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.content-container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-container h1{
+    font-size: 3rem;
+    color: #ffff;
+}
+
+.content-container p{
+    width: 600px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #fff;
+    line-height: 1.5rem;
+}
+
+.signup-btn{
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    outline: none;
+    border: none;
+    background: linear-gradient(to right,  var(--primary-color), var(--secondary-color));
+    background-size: 200%;
+    background-repeat: no-repeat;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.signup-btn:hover{
+    background-position: right;
+    border-radius: 40px;
+}
+
+.modal-container{
+    position: fixed;
+    background: rgba(0,0,0,0.3);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 100vh) scale(0.8);
+    max-width: 100%;
+    width: 400px;
+    background: linear-gradient(to top, var(--primary-color), var(--secondary-color));
+    color: white;
+    box-shadow: 0 0 10px var(--primary-color);
+    border-radius: 10px;
+    transition: transform 0.7s cubic-bezier(0.25, 1.7, 0.5, 1), opacity 0.3s ease-in-out;
+}
+
+.modal-content{
+    padding: 1.2rem;
+}
+
+.modal-form div{
+    margin: 2.2rem 0;
+}
+
+.modal-form label{
+    display: flex;
+    flex-direction: column;
+    margin: 1.2rem 0;
+}
+
+.modal-form .form-input{
+    padding: 0.8rem;
+    width: 100%;
+    outline: none;
+    border: 1px solid rgb(82, 82, 82);
+}
+
+.submit-btn{
+    padding: 0.5rem 1.5rem;
+    border: none;
+    background: linear-gradient(to left, var(--primary-color), var(--secondary-color));
+    color: #fff;
+    background-size: 200%;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.submit-btn:hover{
+    background-position: right;
+    border-radius: 10px;
+}
+
+.close-btn{
+    position: absolute;
+    background: none;
+    border: none;
+    top: 12px;
+    right: 12px;
+    cursor: pointer;
+}
+
+.close-btn img{
+    width: 25px;
+    height: 25px;
+}
+
+.show{
+    visibility: visible;
+    opacity: 1;
+}
+
+.show .modal{
+    transform: translate(-50%, -50%) scale(1);
+}

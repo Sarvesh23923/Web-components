@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#FFB75E, #ED8F03);
+    font-family: sans-serif;
+}
+
+.accordion{
+    margin: 6.75rem auto;
+    width: 37.5rem;
+}
+
+.accordion li{
+    list-style: none;
+    padding: 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    background: #fff;
+}
+
+.accordion li label{
+    padding: 1rem 0;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: dodgerblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion input[type='checkbox']{
+    display: none;
+}
+
+.accordion .content{
+    font-size: 1rem;
+    line-height: 1.7rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.accordion input[type='checkbox']:checked + span{
+    transform: rotate(90deg);
+    transition: all 0.5s ease;
+}
+
+.accordion input[type='checkbox']:checked + .content{
+    max-height: 400px;
+}

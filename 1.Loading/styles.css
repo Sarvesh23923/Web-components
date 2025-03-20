@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #00008bcb;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.loader{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.loading{
+    background: #fff;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    margin: 0 10px;
+    animation: load 0.8s ease infinite;
+}
+
+.one{
+    animation-delay: 0.3s;
+}
+
+.two{
+    animation-delay: 0.4s;
+}
+
+.three{
+    animation-delay: 0.5s;
+}
+
+
+
+@keyframes load{
+    0%{
+        width: 2rem;
+        height: 2rem;
+    }
+    50%{
+        width: 3rem;
+        height: 3rem;
+    }
+}
